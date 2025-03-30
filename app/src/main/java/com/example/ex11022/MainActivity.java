@@ -179,31 +179,49 @@ public class MainActivity extends AppCompatActivity implements View.OnCreateCont
      */
     public void exit(View view)
     {
+        String inputText = etInput.getText().toString();
         try
         {
-            fIS = openFileInput(FILENAME);
-            iSR = new InputStreamReader(fIS);
-            bR = new BufferedReader(iSR);
-            sB = new StringBuilder();
+            FileOutputStream fOS = openFileOutput(FILENAME, MODE_APPEND);
+            OutputStreamWriter oSW = new OutputStreamWriter(fOS);
+            BufferedWriter bW = new BufferedWriter(oSW);
 
+            bW.write(inputText);
+            bW.newLine();
+            bW.close();
+            oSW.close();
+            fOS.close();
+
+        }
+
+        catch (IOException exception)
+        {
+            exception.printStackTrace();
+        }
+
+        StringBuilder sB = new StringBuilder();
+        try
+        {
+            FileInputStream fIS = openFileInput(FILENAME);
+            InputStreamReader iSR = new InputStreamReader(fIS);
+            BufferedReader bR = new BufferedReader(iSR);
             String line = bR.readLine();
             while (line != null)
             {
                 sB.append(line).append('\n');
                 line = bR.readLine();
             }
-
             bR.close();
             iSR.close();
             fIS.close();
-
-            tv.setText(sB.toString());
         }
-        catch (IOException e)
+
+        catch (IOException exception)
         {
-            e.printStackTrace();
+            exception.printStackTrace();
         }
 
+        tv.setText(sB.toString());
         finish();
     }
 }
