@@ -13,20 +13,6 @@
         android:layout_height="0dp"
         android:layout_weight="14.5" />
 
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_gravity="center"
-        android:layout_weight="15"
-        android:gravity="center"
-        android:textSize="20sp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2" />
-
     <EditText
         android:id="@+id/etInput"
         android:layout_width="wrap_content"
@@ -41,6 +27,20 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="2" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="5" />
 
     <Button
@@ -50,6 +50,7 @@
         android:layout_weight="10"
         android:backgroundTint="#CE93D8"
         android:fontFamily="sans-serif-black"
+        android:onClick="save"
         android:text="save"
         android:textColor="#8E24AA"
         android:textSize="20sp"
@@ -67,6 +68,7 @@
         android:layout_weight="10"
         android:backgroundTint="#CE93D8"
         android:fontFamily="sans-serif-black"
+        android:onClick="reset"
         android:text="reset"
         android:textColor="#8E24AA"
         android:textSize="20sp"
@@ -86,6 +88,7 @@
         android:backgroundTint="#CE93D8"
         android:fontFamily="sans-serif-black"
         android:gravity="center"
+        android:onClick="exit"
         android:text="Exit"
         android:textColor="#8E24AA"
         android:textSize="24sp"
