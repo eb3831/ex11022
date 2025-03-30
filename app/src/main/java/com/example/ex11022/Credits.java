@@ -13,6 +13,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+/**
+ * The Credits Activity class represents the screen that displays the credits or information about the app.
+ * It is an activity that is opened from the main screen when the user selects the "Credits" option from the menu.
+ * This class handles the creation of the options menu and the action when a menu item is selected.
+ *
+ * @author eliya bitton eb3831@bs.amalnet.k12.il
+ * @version 2.0
+ * @since 30/3/2025
+ */
 public class Credits extends AppCompatActivity implements View.OnCreateContextMenuListener
 {
     Intent gi;
