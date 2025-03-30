@@ -20,8 +20,8 @@
         android:layout_gravity="center"
         android:layout_weight="15"
         android:ems="10"
+        android:hint="text input:"
         android:inputType="text"
-        android:text="text input:"
         android:textSize="20sp" />
 
     <Space
